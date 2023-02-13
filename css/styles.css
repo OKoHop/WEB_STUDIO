@@ -57,14 +57,6 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .btn:hover,
-.btn:focus {
-    border: 1px solid transparent;
-    background-color: var(--pressed-color);
-    color: #FFFFFF;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-} */
-
 .link {
     text-decoration: none;
     font-style: normal;
@@ -84,31 +76,22 @@ img {
 }
 
 .container {
-    width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    margin: auto;
-}
-
-.section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*---------------------------------- Header Styles ----------------------------------*/
 
 .header {
-    /* width: 1440px;
-    height: 76px;
-    margin: auto; */
     border-bottom: 1px solid var(--accent-color);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .logo-header {
-    margin-right: 76px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -123,18 +106,21 @@ img {
     color: var(--hover-focus-color);
 }
 
-.header-list {
+.mobile {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-btn {
+    display: inline-flex;
+    border: none;
+    background: transparent;
 }
 
 .header-item {
-
     font-weight: 500;
     color: var(--hero-footer-backgroudcolor);
-}
-
-.header-item+.header-item {
-    margin-left: 40px;
 }
 
 .header-links,
@@ -143,23 +129,6 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 28px;
-}
-
-.address {
-    margin-left: auto;
-}
-
-.address-list {
-    display: flex;
-}
-
-.address-item+.address-item {
-    margin-left: 40px;
-}
-
-.nav-address {
-    display: flex;
-    align-items: center;
 }
 
 .current::after {
@@ -221,8 +190,12 @@ img {
 }
 
 /*---------------------------------- Text section Styles ----------------------------------*/
-
+.text {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
 .text-title {
+    text-align: center;
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
@@ -233,18 +206,20 @@ img {
 
 .text-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 72px;
 }
 
-.text-list .text-item {
+/* .text-list .text-item {
     width: calc((100% - var(--margin-list-item) * 3) / 4);
 }
 
 .text-item+.text-item {
     margin-left: var(--margin-list-item);
-}
+} */
 
 .svg-container {
+    display: none;
     height: 112px;
     background: var(--light-color);
     border-radius: 4px;
@@ -253,6 +228,7 @@ img {
 }
 
 .icon {
+    display: none;
     width: 64px;
     height: 64px;
 }
@@ -260,6 +236,7 @@ img {
 /*---------------------------------- Actibities Styles ----------------------------------*/
 
 .activities {
+    display: none;
     padding-top: 0;
 }
 
@@ -291,6 +268,8 @@ img {
 
 .team {
     background-color: var(--light-color);
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .team-title {
@@ -306,7 +285,9 @@ img {
 
 .team-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
 }
 
 .team-item {
@@ -881,4 +862,138 @@ img {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+}
+
+/*---------------------------------- Mobile Menu ----------------------------------*/
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    background: #FFFFFF;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.mob-menu.is-open {
+    transform: translateX(0);
+}
+
+.mob-menu .close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.menu-list {
+    margin-top: 80px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-link {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1, 11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--hero-footer-backgroudcolor);
+}
+
+.menu-current {
+    color: var(--pressed-color);
+}
+
+.address-block {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.mob-menu .address-list {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tel-link {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+    color: var(--hover-focus-color);
+}
+
+.address-link {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--body-color);
+}
+
+.mob-menu .team-social-list {
+    margin-left: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+}
+
+.menu-address-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 480px) {
+
+    /*---------------------------------- Header Styles ----------------------------------*/
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 428px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    /*---------------------------------- Header Styles ----------------------------------*/
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /*---------------------------------- Header Styles ----------------------------------*/
+    .header-list {
+        display: flex;
+    }
+
+    .nav-address {
+        display: flex;
+        align-items: center;
+    }
+
+    .address {
+        margin-left: auto;
+    }
+
+    .address-list {
+        display: flex;
+    }
+
+    .address-item+.address-item {
+        margin-left: 40px;
+    }
 }
