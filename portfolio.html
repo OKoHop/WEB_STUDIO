@@ -19,12 +19,18 @@
 <body>
     <header class="header">
         <div class="container nav-address">
-            <a href="./index.html" class="logo-header"><span>Web</span>Studio</a>
+            <div class="mobile">
+                <a href="./index.html" class="logo-header"><span>Web</span>Studio</a>
+                <button type="button" class="menu-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="32" height="22">
+                        <use href="./images/symbol-defs.svg#icon-hamburger"></use>
+                    </svg>
+                </button>
+            </div>
             <nav class="header-nav">
                 <ul class="header-list list">
-                    <li class="header-item"><a href="./index.html" class="header-links link">Studio</a></li>
-                    <li class="header-item"><a href="./portfolio.html" class="header-links link current">Portfolio</a>
-                    </li>
+                    <li class="header-item "><a href="./index.html" class="header-links link">Studio</a></li>
+                    <li class="header-item"><a href="./portfolio.html" class="header-links link current">Portfolio</a></li>
                     <li class="header-item"><a href="#Contacts" class="header-links link">Contacts</a></li>
                 </ul>
             </nav>
@@ -53,7 +59,7 @@
                     <li class="projects-item">
                         <a href="" class="project-link">
                             <div class="bg-container">
-                                <img src="./images/bank_app.jpg" alt="bank_app" width="360" class="projects-img">
+                                <img src="./images/bank_app.jpg" alt="bank_app"  class="projects-img">
                                 <div class="overlay-container">
                                     <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task
                                         Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage
@@ -264,6 +270,54 @@
         </div>
 
     </footer>
+    <!------------------ MOBILE MENU ------------------>
+    <div class="mob-menu js-menu-container" id="mobile-menu">
+        <button type="button" class="close-btn js-close-menu">
+            <svg class="close-icon" width="8px" height="8px">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <div class="menu-block">
+            <ul class="menu-list list">
+                <li class="menu-item"><a href="./index.html" class="link menu-link">Studio</a></li>
+                <li class="menu-item"><a href="./portfolio.html" class="link menu-link menu-current">Portfolio</a></li>
+                <li class="menu-item"><a href="#Contacts" class="link menu-link">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="address-block">
+            <ul class="address-list list">
+                <li class="address-item"><a href="tel:+110001111111" class="tel-link link">+11 (000)
+                        111-11-11</a></li>
+                <li class="address-item"><a href="mailto:info@devstudio.com"
+                        class="address-link link">info@devstudio.com</a></li>
+            </ul>
+            <ul class="team-social-list list">
+                <li clas="team-social-item"><a href="" class="team-social-link">
+                        <svg class="social-icon">
+                            <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                    </a></li>
+                <li clas="team-social-item"><a href="" class="team-social-link">
+                        <svg class="social-icon">
+                            <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a></li>
+                <li clas="team-social-item"><a href="" class="team-social-link">
+                        <svg class="social-icon">
+                            <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </a></li>
+                <li clas="team-social-item"><a href="" class="team-social-link">
+                        <svg class="social-icon">
+                            <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                        </svg>
+                    </a></li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
