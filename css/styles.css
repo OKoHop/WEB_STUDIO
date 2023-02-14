@@ -170,6 +170,7 @@ img {
 @media (min-resolution: 2dppx) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile-hero2x.jpg);
+        background-size: contain;
     }
 }
 
@@ -1071,6 +1072,7 @@ img {
     @media (min-resolution: 2dppx) {
         .hero {
             background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-hero2x.jpg);
+            background-size: contain;
         }
     }
 
