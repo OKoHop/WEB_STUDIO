@@ -212,11 +212,19 @@ img {
 .text-title {
     text-align: center;
     margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--hero-footer-backgroudcolor);
+}
+
+.text-prgf {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--body-color);
 }
 
 .text-item:not(:last-child) {
@@ -681,27 +689,25 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 96px 18px;
     background-color: rgba(46, 47, 66, 0.4);
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
-    position: absolute;
-    max-width: 392px;
-    min-height: 586px;
-    top: 50%;
-    left: 50%;
+    width: 100%;
+    min-height: 100%;
     padding: 24px 16px;
     background: var(--bg-modal);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0) rotateZ(0);
+    transform: scale(0) rotateZ(0);
 }
 
 .close-btn {
@@ -742,6 +748,7 @@ img {
 
 .modal-label {
     display: inline-block;
+    width: 100%;
 }
 
 .text-label {
@@ -753,7 +760,7 @@ img {
 }
 
 .modal-input {
-    width: 360px;
+    width: 100%;
     height: 40px;
     padding-left: 38px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -785,7 +792,7 @@ img {
 
 .modal-textarea {
     resize: none;
-    width: 360px;
+    width: 100%;
     height: 120px;
     padding: 8px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -979,6 +986,26 @@ img {
         width: 428px;
     }
 
+    .modal {
+        position: absolute;
+        width: 392px;
+        min-height: 586px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+    }
+
+    .backdrop.is-hidden .modal {
+        transform: translate(-50%, -50%) scale(0) rotateZ(0);
+    }
+
+    .modal-input {
+        width: 360px;
+    }
+
+    .modal-textarea {
+        width: 360px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1142,6 +1169,17 @@ img {
 
     .modal {
         max-width: 400px;
+        min-height: 586px;
+        position: absolute;
+        width: 408px;
+        min-height: 586px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+    }
+
+    .backdrop.is-hidden .modal {
+        transform: translate(-50%, -50%) scale(0) rotateZ(0);
     }
 }
 
@@ -1211,6 +1249,12 @@ img {
         color: var(--hero-footer-backgroudcolor);
     }
 
+    .text-prgf {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
     .text-list {
         display: flex;
         flex-wrap: wrap;
@@ -1245,6 +1289,7 @@ img {
     .activities.section {
         padding-top: 0;
     }
+
     /*---------------------------------- Customers ----------------------------------*/
 
 
@@ -1270,5 +1315,22 @@ img {
 
     .footer-container {
         justify-content: space-between;
+    }
+
+    /*---------------------------------- Modal ----------------------------------*/
+
+    .modal {
+        max-width: 400px;
+        min-height: 586px;
+        position: absolute;
+        width: 408px;
+        min-height: 586px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+    }
+
+    .backdrop.is-hidden .modal {
+        transform: translate(-50%, -50%) scale(0) rotateZ(0);
     }
 }
