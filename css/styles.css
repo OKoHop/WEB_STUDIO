@@ -1240,6 +1240,7 @@ img {
 
     .activities {
         display: block;
+        padding-top: 0;
     }
 
     /*---------------------------------- Customers ----------------------------------*/
