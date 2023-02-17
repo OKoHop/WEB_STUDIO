@@ -1428,8 +1428,8 @@ img {
         /*---------------------------------- Modal ----------------------------------*/
 
         .modal {
-            max-width: 400px;
-            min-height: 586px;
+            width: 400px;
+            height: 586px;
             position: absolute;
             width: 408px;
             min-height: 586px;
